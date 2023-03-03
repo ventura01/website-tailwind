@@ -3,21 +3,23 @@
 import React from "react";
 import Link from "next/link";
 import Button from "./Button";
+import { links } from "@/datos";
 
-const links = [
-  { name: "Home", route: "/" },
-  { name: "About", route: "/about" },
-  { name: "Contact", route: "/contact" },
-];
+interface LinksProps {
+  name: string;
+  route: string;
+}
 
 const Navbar = () => {
   return (
     <nav>
       <div className="bg-gray-50 border-b-2 mb-6">
         <div className="container flex justify-between py-2 items-center mx-auto content-center ">
-          <div>Logo</div>
+          <div className="font-bold">
+            MOTT <span className="text-purple-500">&</span> CLAIRE
+          </div>
           <div className="hidden md:flex sm:flex space-x-4">
-            {links.map((link) => (
+            {links.map((link: LinksProps) => (
               <div key={link.route}>
                 <ul>
                   <li className="hover:text-purple-600">

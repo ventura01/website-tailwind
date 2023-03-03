@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section id="hero">
       <div className="container mx-auto flex flex-col-reverse lg:flex-row">
-        <div className="flex flex-col mt-12 p-6 md:p-12 space-y-12 md:w-1/2">
+        <div className="flex flex-col mt-12 p-6 md:px-36 space-y-12 md:w-1/2">
           <div>
             <h2 className="text-3xl text-justify mb-3 font-bold capitalize md:text-5xl md:text-left">
               Lorem ipsum dolor sit amet consectetur.
@@ -30,7 +30,7 @@ const Hero = () => {
             alt="Hero-img"
             height={600}
             width={600}
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
       </div>

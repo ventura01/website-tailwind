@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import ProductList from "@/components/ProductList";
+import CTASection from "@/components/CTASection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <ProductList />
       <Features />
+      <CTASection />
     </main>
   );
 }

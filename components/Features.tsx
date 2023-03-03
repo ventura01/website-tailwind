@@ -10,7 +10,7 @@ const Features = () => {
   return (
     <section id="features">
         <div className="mt-24 mb-10 text-center">
-          <h2 className="capitalize text-3xl font-bold md:text-5xl">
+          <h2 className="capitalize text-3xl font-bold md:text-4xl">
             our skills
           </h2>
           <p className="my-4 text-gray-700">Lorem ipsum dolor sit amet consectetur.</p>
