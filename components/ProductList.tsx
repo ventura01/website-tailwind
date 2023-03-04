@@ -39,34 +39,20 @@ const ProductList = () => {
             Lorem ipsum dolor sit amet.
           </p>
         </div>
-        <div className="grid grid-cols-1 w-auto gap-8 mx-auto sm:grid-cols-3 md:w-3/4">
+        <div className="grid grid-cols-1 w-auto gap-8 mx-auto sm:grid-cols-2 lg:grid-cols-3 md:w-4/5">
           {/* <Product /> */}
           {productos.map((product: Product) => (
-            <div key={product.id} className="rounded-2xl overflow-hidden bg-gray-50">
-              <Link href={`/`}>
-                <Image
-                  src={product.url}
-                  alt={product.name}
-                  width={600}
-                  height={600}
-                  className="object-cover h-64 w-full object-center"
-                />
-              </Link>
-              <div className="p-4">
-                <h3 className="uppercase text-gray-500">{product.cat}</h3>
-                <h2 className="font-semibold text-2xl my-4">{product.name}</h2>
-                <p className="text-sm text-gray-600">{product.shortDesc}</p>
-              </div>
-              <div className="flex justify-end space-x-4 p-4">
-                {/* <del>${product.price}</del> */}
-                <span className="font-bold text-2xl">${product.descPrice}</span>
-              </div>
-              <div className="flex justify-center">
-                <button className="rounded-full mb-4 border-purple-500 text-sm text-purple-700 font-semibold border-2 py-1 px-4 hover:bg-purple-500 hover:text-white hover:border-0">
-                  Shop Now
-                </button>
-              </div>
-            </div>
+            <Product
+              key={product.id}
+              name={product.name}
+              price={product.price}
+              id={product.id}
+              descPrice={product.descPrice}
+              shortDesc={product.shortDesc}
+              longDesc={product.longDesc}
+              url={product.url}
+              cat={product.cat}
+            />
           ))}
         </div>
       </div>

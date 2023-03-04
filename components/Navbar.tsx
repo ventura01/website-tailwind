@@ -5,6 +5,9 @@ import Link from "next/link";
 import Button from "./Button";
 import { links } from "@/datos";
 
+//------------ ICONS------------
+import { MdShoppingCart } from "react-icons/md";
+
 interface LinksProps {
   name: string;
   route: string;
@@ -15,8 +18,8 @@ const Navbar = () => {
     <nav>
       <div className="bg-gray-50 border-b-2 mb-6">
         <div className="container flex justify-between py-2 items-center mx-auto content-center ">
-          <div className="font-bold">
-            MOTT <span className="text-purple-500">&</span> CLAIRE
+          <div className="font-bold text-gray-700">
+            MOTT <span className="text-purple-600">&</span> CLAIRE
           </div>
           <div className="hidden md:flex sm:flex space-x-4">
             {links.map((link: LinksProps) => (
@@ -29,8 +32,9 @@ const Navbar = () => {
               </div>
             ))}
           </div>
-          <div className="hidden md:flex">
-            <Button />
+          <div className="right-6 relative md:right-0">
+            <span className="absolute bg-purple-600 rounded-full text-white py-[2px] px-[6px] -right-[14px] -top-[10px] text-[10px]">3</span>
+            <MdShoppingCart size={'1.25rem'} />
           </div>
         </div>
       </div>

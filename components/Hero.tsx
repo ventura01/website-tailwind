@@ -12,7 +12,7 @@ const Hero = () => {
               Lorem ipsum dolor sit amet consectetur.
             </h2>
             <div className="bg-purple-500 w-1/2 self-center h-1 rounded-xl my-8"></div>
-            <p className="text-gray-700 text-justify tracking-tighter	md:tracking-normal">
+            <p className="text-gray-700 text-justify ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
               optio adipisci reprehenderit consectetur deserunt illum unde
               doloremque sit corrupti deleniti impedit quas, id veritatis

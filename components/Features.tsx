@@ -16,7 +16,7 @@ const Features = () => {
           <p className="my-4 text-gray-700">Lorem ipsum dolor sit amet consectetur.</p>
         </div>
         {/* <div className="bg-purple-500 w-1/2 self-center h-1 rounded-xl my-8"></div> */}
-        <div className="bg-gray-100 grid grid-cols-1 md:grid-cols-4">
+        <div className="bg-gray-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col p-12">
             <MdDateRange className="self-center" size="3rem" color="gray" />
             <h3 className="text-2xl my-3 font-semibold text-center">Lorem ipsum dolor sit.</h3>
