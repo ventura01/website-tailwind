@@ -22,10 +22,10 @@ const ProductDetail = ({ params }) => {
   return (
     <div className="container mx-auto mb-12">
       <div className="grid grid-cols-1 px-4 md:px-24 md:grid-cols-2">
-        <div className="md:p-8">
+        <div className="overflow-hidden md:p-8">
           <Image
             src={data.url}
-            className="object-cover h-120 w-full object-center"
+            className="object-cover h-96 w-full object-center"
             width={600}
             height={600}
             alt={data.name}

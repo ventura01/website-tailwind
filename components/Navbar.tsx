@@ -25,7 +25,7 @@ const Navbar = () => {
             {links.map((link: LinksProps) => (
               <div key={link.route}>
                 <ul>
-                  <li className="hover:text-purple-600">
+                  <li className="font-semibold text-sm hover:text-purple-600">
                     <Link href={link.route}>{link.name}</Link>
                   </li>
                 </ul>
@@ -33,7 +33,7 @@ const Navbar = () => {
             ))}
           </div>
           <div className="right-6 relative md:right-0">
-            <span className="absolute bg-purple-600 rounded-full text-white py-[2px] px-[6px] -right-[14px] -top-[10px] text-[10px]">3</span>
+            <span className="absolute bg-purple-600 font-semibold rounded-full text-white py-[1px] px-[5px] -right-[10px] -top-[10px] text-[10px]">3</span>
             <MdShoppingCart size={'1.25rem'} />
           </div>
         </div>
