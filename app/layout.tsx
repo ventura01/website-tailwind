@@ -2,6 +2,8 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { store } from "@/redux/store";
+import { Providers } from "../redux/provider";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "600", "700"],
@@ -22,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.className} scroll-smooth}`}>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        {/* <Providers> */}
+          <Navbar />
+          {children}
+          <Footer />
+        {/* </Providers> */}
       </body>
     </html>
   );

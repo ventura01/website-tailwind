@@ -7,6 +7,8 @@ import { links } from "@/datos";
 
 //------------ ICONS------------
 import { MdShoppingCart } from "react-icons/md";
+//------------ REDUX------------
+import { useSelector } from "react-redux";
 
 interface LinksProps {
   name: string;
@@ -14,6 +16,7 @@ interface LinksProps {
 }
 
 const Navbar = () => {
+  // const quantity = useSelector((state) => state.cart.quantity);
   return (
     <nav>
       <div className="bg-gray-50 border-b-2 mb-6">
@@ -33,8 +36,10 @@ const Navbar = () => {
             ))}
           </div>
           <div className="right-6 relative md:right-0">
-            <span className="absolute bg-purple-600 font-semibold rounded-full text-white py-[1px] px-[5px] -right-[10px] -top-[10px] text-[10px]">3</span>
-            <MdShoppingCart size={'1.25rem'} />
+            <span className="absolute bg-purple-600 font-semibold rounded-full text-white py-[1px] px-[5px] -right-[10px] -top-[10px] text-[10px]">
+              {}
+            </span>
+            <MdShoppingCart size={"1.25rem"} />
           </div>
         </div>
       </div>

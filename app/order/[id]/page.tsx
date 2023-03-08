@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import styles from "../../styles/Order.module.css";
 import {
   MdPaid,
   MdCheckCircle,
@@ -8,6 +9,13 @@ import {
   MdRamenDining,
 } from "react-icons/md";
 const Order = () => {
+  const status: number = 0;
+  const statusClass = (index: number) => {
+    if (index - status < 1) return styles.done;
+    if (index - status === 1) return styles.inProgress;
+    if (index - status > 1) return styles.unDone;
+  };
+
   return (
     <div className="container mx-auto flex flex-col mb-10 md:flex-row">
       <div className="flex flex-col w-full md:w-3/4">
@@ -30,39 +38,39 @@ const Order = () => {
           </tbody>
         </table>
         <div className="flex space-x-1 mt-12 mb-12 justify-around md:w-2/3 md:space-x-12">
-          <div className="flex flex-col items-center">
+          <div className={`${statusClass(0)} flex flex-col items-center`}>
             <span>Paid</span>
             <div>
               <MdPaid size={"2rem"} />
             </div>
-            <div>
+            <div className={`${styles.checkedIcon}`}>
               <MdCheckCircle color="green" />
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className={`${statusClass(1)} flex flex-col items-center`}>
             <span>Preparing</span>
             <div>
               <MdRamenDining size={"2rem"} />
             </div>
-            <div>
+            <div className={`${styles.checkedIcon}`}>
               <MdCheckCircle color="green" />
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className={`${statusClass(2)} flex flex-col items-center`}>
             <span>Sent</span>
             <div>
               <MdDeliveryDining size={"2rem"} />
             </div>
-            <div>
+            <div className={`${styles.checkedIcon}`}>
               <MdCheckCircle color="green" />
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className={`${statusClass(3)} flex flex-col items-center`}>
             <span>Delivered</span>
             <div>
               <MdCelebration size={"2rem"} />
             </div>
-            <div>
+            <div className={`${styles.checkedIcon}`}>
               <MdCheckCircle color="green" />
             </div>
           </div>

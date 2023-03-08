@@ -1,0 +1,16 @@
+.done{}
+.inProgress{
+    animation: inProgress 1s ease infinite alternate;
+    -webkit-animation: inProgress 1s ease infinite alternate;
+}
+@keyframes inProgress {
+    from { opacity: 0}
+    to{ opacity: 1}
+    
+}
+.unDone .checkedIcon, .inProgress .checkedIcon{
+    display: none;;
+}
+.unDone{
+    opacity: 0.3;
+}

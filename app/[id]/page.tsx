@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { productos } from "../../datos";
+import { useAppDispatch } from "@/redux/hooks";
+import { addTocart } from "@/redux/slices/cartSlice";
 
 interface Product {
   id: number;
@@ -18,6 +20,11 @@ const ProductDetail = ({ params }) => {
   const { id } = params;
   const data = productos[id - 1];
   console.log(data);
+  // ============REDUX=================
+  // const dispatch = useAppDispatch();
+  // const handelAddToCart = () => {
+  //   // dispatch(addTocart({ }));
+  // };
 
   return (
     <div className="container mx-auto mb-12">
@@ -42,7 +49,10 @@ const ProductDetail = ({ params }) => {
             <span className="text-4xl font-thin">${data.descPrice}</span>
           </div>
           <div className="flex justify-center my-4">
-            <button className="rounded-full uppercase mb-4 border-purple-500 text-sm text-purple-700 font-semibold border-2 py-1 px-4 hover:bg-purple-500 hover:text-white hover:border-0">
+            <button
+              // onClick={handelAddToCart}
+              className="rounded-full uppercase mb-4 border-purple-500 text-sm text-purple-700 font-semibold border-2 py-1 px-4 hover:bg-purple-500 hover:text-white hover:border-0"
+            >
               add to cart
             </button>
           </div>
